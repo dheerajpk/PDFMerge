@@ -185,8 +185,8 @@ namespace PDFMerge
 
         private void TestImageSign()
         {
-            string sourceImage = @"C:\Users\dheepk\Documents\PDFMerge\Reim_P_2.jpg";
-            string templateImage = @"C:\Users\dheepk\Documents\PDFMerge\template.jpg";
+            string sourceImage = @"";
+            string templateImage = @"";
             //Bitmap.FromFile(sourceImage), Bitmap.FromFile(templateImage)
 
             //ImageManipulator.RDImageSignature(new Bitmap(sourceImage), new Bitmap(templateImage));
@@ -274,21 +274,4 @@ namespace PDFMerge
 
     }
 }
-
-/*
-
-using (FileStream file = File.OpenRead(@"C:\Users\dheepk\Desktop\Bill.pdf")) // in file
-        {
-            var bytes = new byte[file.Length];
-            file.Read(bytes, 0, bytes.Length);
-            using (var pdf = new libpdf.LibPdf(bytes))
-            {
-                byte[] pngBytes = pdf.GetImage(0, ImageType.PNG); // image type
-                using (var outFile = File.Create(@"C:\Users\dheepk\Documents\PDFMerge\Temp\file.png")) // out file
-                {
-                    outFile.Write(pngBytes, 0, pngBytes.Length);
-                }
-            }
-        }
-*/
 
