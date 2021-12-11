@@ -16,7 +16,7 @@ namespace PDFMerge
         private static Bitmap template = null;
         static ImageManipulator()
         {
-            var strm = App.GetContentStream(new Uri("/Signature.jpg", UriKind.RelativeOrAbsolute)).Stream;
+            var strm = App.GetContentStream(ne§w Uri("/Signature.jpg", UriKind.RelativeOrAbsolute)).Stream;
             template = new Bitmap(strm);
 
         }
@@ -77,7 +77,6 @@ namespace PDFMerge
             sourceImage.UnlockBits(data);
             if (matchings.Any())
                 return matchings[0].Rectangle;
-            //sourceImage.Save(@"C:\Users\dheepk\Documents\PDFMerge\template1.jpg");
             return Rectangle.Empty;
         }
     }
